@@ -1,0 +1,23 @@
+{
+  "name": "webpack-demos",
+  "version": "1.0.0",
+  "description": "a collection of simple demos of Webpack",
+  "main": "index.js",
+  "keywords": [
+    "build",
+    "demo",
+    "webpack"
+  ],
+  "scripts": {
+    "dev": "webpack-dev-server --https",
+    "build": "webpack",
+    "prestart": "rm ./node_modules/webpack-dev-server/ssl/server.pem && cp -f ./ssl/server.pem ./node_modules/webpack-dev-server/ssl"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.30.1",
+    "open-browser-webpack-plugin": "0.0.5",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
