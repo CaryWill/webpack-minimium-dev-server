@@ -5,6 +5,8 @@ module.exports = {
   entry: "./main.js",
   output: {
     filename: "bundle.js",
+    libraryTarget: 'umd',
+    library: 'MyLibrary',
   },
   plugins: [
     new HtmlwebpackPlugin({
