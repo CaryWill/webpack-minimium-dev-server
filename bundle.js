@@ -80,6 +80,7 @@ return /******/ (function(modules) { // webpackBootstrap
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_index__ = __webpack_require__(1);
+document.write('<h1>Hello World</h1>');
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__src_index__["a" /* test */])();
@@ -91,9 +92,22 @@ Object(__WEBPACK_IMPORTED_MODULE_0__src_index__["a" /* test */])();
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = test;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__carywill_demo_npm_link__ = __webpack_require__(2);
+
+
 function test() {
-  console.log("test");
+  console.log("test", __WEBPACK_IMPORTED_MODULE_0__carywill_demo_npm_link__["a" /* name */]);
 }
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+const name = "npm-link-demo"
+/* harmony export (immutable) */ __webpack_exports__["a"] = name;
+
 
 
 /***/ })
