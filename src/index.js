@@ -1,5 +1,5 @@
-import { name } from '@carywill/demo-npm-link';
+//import { name } from '@carywill/demo-npm-link';
 
 export function test() {
-  console.log("test", name);
+  console.log("test");
 }

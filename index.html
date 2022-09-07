@@ -5,5 +5,17 @@
     <title>Webpack-demos</title>
   </head>
   <body>
-  <script type="text/javascript" src="bundle.js"></script></body>
+  <!--<script type="text/javascript" src="bundle.js"></script></body>-->
+  <script src="https://g.alicdn.com/code/lib/require.js/2.3.6/require.min.js"></script>
+  <script>
+    globalThis.requirejs.config({
+      paths: {
+        'package1': 'http://127.0.0.1:8082/bundle.named.amd',
+      },
+    });
+    // 并不需要 bundle.js 这个文件使用 `define('moduleName', [], () => {})` 的指定包名的形式
+    globalThis.requirejs(['package1'], (module) => {
+      console.log(module)
+    })
+  </script>
 </html>
