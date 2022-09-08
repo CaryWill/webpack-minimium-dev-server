@@ -12,9 +12,13 @@
       paths: {
         'package1': 'http://127.0.0.1:8082/bundle.named.amd',
       },
+      // https://requirejs.org/docs/api.html#config-bundles
+      bundles: {
+        'package1': ['MyLibrary']
+      }
     });
     // 并不需要 bundle.js 这个文件使用 `define('moduleName', [], () => {})` 的指定包名的形式
-    globalThis.requirejs(['package1'], (module) => {
+    globalThis.requirejs(['MyLibrary'], (module) => {
       console.log(module)
     })
   </script>
