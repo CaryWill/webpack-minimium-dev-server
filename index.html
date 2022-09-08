@@ -10,16 +10,18 @@
   <script>
     globalThis.requirejs.config({
       paths: {
+        'MyLibrary': 'http://127.0.0.1:8082/bundle.named.amd',
         'package1': 'http://127.0.0.1:8082/bundle.named.amd',
       },
       // https://requirejs.org/docs/api.html#config-bundles
-      bundles: {
-        'package1': ['MyLibrary']
-      }
+      // bundles: {
+        // 'package1': ['MyLibrary']
+      // }
     });
     // 并不需要 bundle.js 这个文件使用 `define('moduleName', [], () => {})` 的指定包名的形式
+    // 如果你打包出来的是匿名的 amd 模块那么没事，如果是非匿名的，那么需要和你的 package name 的值保持一致
     globalThis.requirejs(['MyLibrary'], (module) => {
-      console.log(module)
+      console.log('MyLibrary', module)
     })
   </script>
 </html>
