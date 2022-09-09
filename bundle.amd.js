@@ -1,4 +1,4 @@
-define([], function() { return /******/ (function(modules) { // webpackBootstrap
+define("MyLibrary", [], function() { return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
